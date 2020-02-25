@@ -11,7 +11,7 @@
 
 <script>
 /* eslint-disable vue/require-default-prop */
-import QueryBuilderGroup from './layouts/Bootstrap/BootstrapGroup.vue';
+import QueryBuilderGroup from './layouts/Quasar/QuasarGroup.vue';
 import deepClone from './utilities.js';
 
 var defaultLabels = {

@@ -1,7 +1,5 @@
 <template>
   <div class="q-card q-card--flat no-shadow" :class="depth > 1 ? `q-ma-md q-card--bordered` : ``">
-    <!-- <div class="q-card__section q-card__section--vert q-gutter-y-md"> -->
-    <!-- <div class="row no-wrap justify-between"> -->
     <q-toolbar style="min-height: 40px" class="bg-blue-grey-1">
       <q-select
         v-model="selectedRule"
@@ -48,32 +46,16 @@
           icon="mdi-close"
           @click="remove"
         />
-
-        <!-- <q-btn-dropdown>
-            <q-list padding>
-              <q-item
-                v-for="label in labels.matchTypes"
-                :key="label.index"
-                v-model="query.logicalOperator"
-                clickable
-              >
-                {{ label.label }}
-              </q-item>
-            </q-list>
-          </q-btn-dropdown> -->
       </q-btn-group>
-      <!-- </div> -->
     </q-toolbar>
 
     <query-builder-children v-bind="$props" />
-    <!-- </div> -->
   </div>
 </template>
 
 <script>
-import { pBtn, pSelect, pInput } from '@/static/props'
-import QueryBuilderGroup         from 'vue-query-builder/dist/group/QueryBuilderGroup.umd'
-import QueryBuilderRule          from './o.query-builder.rule'
+import QueryBuilderGroup from '../../components/QueryBuilderGroup'
+import QueryBuilderRule  from './QuasarRule.vue'
 
 export default {
   name: `QueryBuilderGroup`,
@@ -86,9 +68,27 @@ export default {
   extends: QueryBuilderGroup,
 
   data: () => ({
-    pBtn,
-    pInput,
-    pSelect
+    pBtn: {
+      unelevated: true
+    },
+    pInput: {
+      inputClass: `text-body2`,
+      clearIcon:  `mdi-close`,
+      clearable:  true,
+      color:      `primary`,
+      dense:      true,
+      filled:     true,
+      hideHint:   true,
+    },
+    pSelect: {
+      inputClass:   `text-body2`,
+      clearIcon:    `mdi-close`,
+      clearable:    true,
+      color:        `primary`,
+      dense:        true,
+      filled:       true,
+      optionsDense: true,
+    }
   })
 }
 </script>

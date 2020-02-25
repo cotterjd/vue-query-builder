@@ -5,7 +5,7 @@
         {{ rule.label }}
       </div>
 
-      <div class="row q-gutter-x-sm">
+      <div class="row q-gutter-x-sm items-center">
         <!-- List of operands (optional) -->
         <q-select
           v-if="typeof rule.operands !== 'undefined'"
@@ -128,16 +128,34 @@
 </template>
 
 <script>
-import { pBtn, pSelect, pInput } from '@/static/props'
-import QueryBuilderRule          from 'vue-query-builder/dist/rule/QueryBuilderRule.umd'
+import QueryBuilderRule from '../../components/QueryBuilderRule'
 
 export default {
   extends: QueryBuilderRule,
 
   data: () => ({
-    pBtn,
-    pInput,
-    pSelect
+    pBtn: {
+      unelevated: true,
+      dense:      true,
+    },
+    pInput: {
+      class:     `text-body2`,
+      clearIcon: `mdi-close`,
+      clearable: true,
+      color:     `primary`,
+      dense:     true,
+      filled:    true,
+      hideHint:  true,
+    },
+    pSelect: {
+      class:        `text-body2`,
+      clearIcon:    `mdi-close`,
+      clearable:    true,
+      color:        `primary`,
+      dense:        true,
+      filled:       true,
+      optionsDense: true,
+    }
   })
 }
 </script>
