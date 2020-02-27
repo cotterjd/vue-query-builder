@@ -1,11 +1,9 @@
 <template>
   <div class="q-card q-card--flat no-shadow q-pa-sm q-mb-md">
-    <div class="row justify-between items-center">
-      <div class="col-auto q-ma-sm">
-        {{ rule.label }}
-      </div>
+    <div class="row justify-between items-center no-wrap">
+      <div class="col-auto q-ma-sm">{{ rule.label }}</div>
 
-      <div class="row q-gutter-x-sm items-center">
+      <div class="row q-gutter-x-sm items-center no-wrap">
         <!-- List of operands (optional) -->
         <q-select
           v-if="typeof rule.operands !== 'undefined'"
@@ -50,36 +48,18 @@
         />
 
         <!-- Custom component input -->
-        <div
-          v-if="isCustomComponent"
-          class="vqb-custom-component-wrap"
-        >
-          <component
-            :is="rule.component"
-            :value="query.value"
-            @input="updateQuery"
-          />
+        <div v-if="isCustomComponent" class="vqb-custom-component-wrap">
+          <component :is="rule.component" :value="query.value" @input="updateQuery" />
         </div>
 
         <!-- Checkbox input -->
-        <template
-          v-if="rule.inputType === 'checkbox'"
-        >
-          <q-option-group
-            v-model="query.value"
-            :options="rule.choices"
-            type="checkbox"
-          />
+        <template v-if="rule.inputType === 'checkbox'">
+          <q-option-group v-model="query.value" :options="rule.choices" type="checkbox" />
         </template>
 
         <!-- Radio input -->
-        <template
-          v-if="rule.inputType === 'radio'"
-        >
-          <q-option-group
-            v-model="query.value"
-            :options="rule.choices"
-          />
+        <template v-if="rule.inputType === 'radio'">
+          <q-option-group v-model="query.value" :options="rule.choices" />
         </template>
 
         <!-- Select without groups -->
@@ -107,28 +87,19 @@
               v-for="sub_option in option"
               :key="sub_option.value"
               :value="sub_option.value"
-            >
-              {{ sub_option.label }}
-            </option>
+            >{{ sub_option.label }}</option>
           </optgroup>
         </select>
 
         <!-- Remove rule button -->
-        <q-btn
-          round
-          unelevated
-          size="sm"
-          type="button"
-          icon="mdi-close"
-          @click="remove"
-        />
+        <q-btn round unelevated size="sm" type="button" icon="mdi-close" @click="remove" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import QueryBuilderRule from '../../components/QueryBuilderRule'
+import QueryBuilderRule from "../../components/QueryBuilderRule";
 
 export default {
   extends: QueryBuilderRule,
@@ -136,26 +107,26 @@ export default {
   data: () => ({
     pBtn: {
       unelevated: true,
-      dense:      true,
+      dense: true
     },
     pInput: {
-      class:     `text-body2`,
+      class: `text-body2`,
       clearIcon: `mdi-close`,
       clearable: true,
-      color:     `primary`,
-      dense:     true,
-      filled:    true,
-      hideHint:  true,
+      color: `primary`,
+      dense: true,
+      filled: true,
+      hideHint: true
     },
     pSelect: {
-      class:        `text-body2`,
-      clearIcon:    `mdi-close`,
-      clearable:    true,
-      color:        `primary`,
-      dense:        true,
-      filled:       true,
-      optionsDense: true,
+      class: `text-body2`,
+      clearIcon: `mdi-close`,
+      clearable: true,
+      color: `primary`,
+      dense: true,
+      filled: true,
+      optionsDense: true
     }
   })
-}
+};
 </script>

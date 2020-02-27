@@ -4654,12 +4654,12 @@ var QueryBuilderGroup_component = normalizeComponent(
 )
 
 /* harmony default export */ var QueryBuilderGroup = (QueryBuilderGroup_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0f04f499-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/layouts/Quasar/QuasarRule.vue?vue&type=template&id=79098894&
-var QuasarRulevue_type_template_id_79098894_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"q-card q-card--flat no-shadow q-pa-sm q-mb-md"},[_c('div',{staticClass:"row justify-between items-center"},[_c('div',{staticClass:"col-auto q-ma-sm"},[_vm._v(" "+_vm._s(_vm.rule.label)+" ")]),_c('div',{staticClass:"row q-gutter-x-sm items-center"},[(typeof _vm.rule.operands !== 'undefined')?_c('q-select',_vm._b({attrs:{"options":_vm.rule.operands,"clearable":false},model:{value:(_vm.query.operand),callback:function ($$v) {_vm.$set(_vm.query, "operand", $$v)},expression:"query.operand"}},'q-select',_vm.pSelect,false)):_vm._e(),(typeof _vm.rule.operators !== 'undefined' && _vm.rule.operators.length > 1)?_c('q-select',_vm._b({attrs:{"options":_vm.rule.operators,"clearable":false},model:{value:(_vm.query.operator),callback:function ($$v) {_vm.$set(_vm.query, "operator", $$v)},expression:"query.operator"}},'q-select',_vm.pSelect,false)):_vm._e(),(_vm.rule.inputType === 'text')?_c('q-input',_vm._b({attrs:{"type":"text","placeholder":_vm.labels.textInputPlaceholder},model:{value:(_vm.query.value),callback:function ($$v) {_vm.$set(_vm.query, "value", $$v)},expression:"query.value"}},'q-input',_vm.pInput,false)):_vm._e(),(_vm.rule.inputType === 'number')?_c('q-input',_vm._b({attrs:{"type":"number"},model:{value:(_vm.query.value),callback:function ($$v) {_vm.$set(_vm.query, "value", $$v)},expression:"query.value"}},'q-input',_vm.pInput,false)):_vm._e(),(_vm.rule.inputType === 'date')?_c('q-input',_vm._b({attrs:{"type":"date"},model:{value:(_vm.query.value),callback:function ($$v) {_vm.$set(_vm.query, "value", $$v)},expression:"query.value"}},'q-input',_vm.pInput,false)):_vm._e(),(_vm.isCustomComponent)?_c('div',{staticClass:"vqb-custom-component-wrap"},[_c(_vm.rule.component,{tag:"component",attrs:{"value":_vm.query.value},on:{"input":_vm.updateQuery}})],1):_vm._e(),(_vm.rule.inputType === 'checkbox')?[_c('q-option-group',{attrs:{"options":_vm.rule.choices,"type":"checkbox"},model:{value:(_vm.query.value),callback:function ($$v) {_vm.$set(_vm.query, "value", $$v)},expression:"query.value"}})]:_vm._e(),(_vm.rule.inputType === 'radio')?[_c('q-option-group',{attrs:{"options":_vm.rule.choices},model:{value:(_vm.query.value),callback:function ($$v) {_vm.$set(_vm.query, "value", $$v)},expression:"query.value"}})]:_vm._e(),(_vm.rule.inputType === 'select' && !_vm.hasOptionGroups)?_c('q-select',_vm._b({attrs:{"clearable":false,"multiple":_vm.rule.type === 'multi-select',"options":_vm.selectOptions},model:{value:(_vm.query.value),callback:function ($$v) {_vm.$set(_vm.query, "value", $$v)},expression:"query.value"}},'q-select',_vm.pSelect,false)):_vm._e(),(_vm.rule.inputType === 'select' && _vm.hasOptionGroups)?_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.query.value),expression:"query.value"}],attrs:{"multiple":_vm.rule.type === 'multi-select'},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.query, "value", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},_vm._l((_vm.selectOptions),function(option,option_key){return _c('optgroup',{key:option_key,attrs:{"label":option_key}},_vm._l((option),function(sub_option){return _c('option',{key:sub_option.value,domProps:{"value":sub_option.value}},[_vm._v(" "+_vm._s(sub_option.label)+" ")])}),0)}),0):_vm._e(),_c('q-btn',{attrs:{"round":"","unelevated":"","size":"sm","type":"button","icon":"mdi-close"},on:{"click":_vm.remove}})],2)])])}
-var QuasarRulevue_type_template_id_79098894_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0f04f499-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/layouts/Quasar/QuasarRule.vue?vue&type=template&id=7dd4a8ba&
+var QuasarRulevue_type_template_id_7dd4a8ba_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"q-card q-card--flat no-shadow q-pa-sm q-mb-md"},[_c('div',{staticClass:"row justify-between items-center no-wrap"},[_c('div',{staticClass:"col-auto q-ma-sm"},[_vm._v(_vm._s(_vm.rule.label))]),_c('div',{staticClass:"row q-gutter-x-sm items-center no-wrap"},[(typeof _vm.rule.operands !== 'undefined')?_c('q-select',_vm._b({attrs:{"options":_vm.rule.operands,"clearable":false},model:{value:(_vm.query.operand),callback:function ($$v) {_vm.$set(_vm.query, "operand", $$v)},expression:"query.operand"}},'q-select',_vm.pSelect,false)):_vm._e(),(typeof _vm.rule.operators !== 'undefined' && _vm.rule.operators.length > 1)?_c('q-select',_vm._b({attrs:{"options":_vm.rule.operators,"clearable":false},model:{value:(_vm.query.operator),callback:function ($$v) {_vm.$set(_vm.query, "operator", $$v)},expression:"query.operator"}},'q-select',_vm.pSelect,false)):_vm._e(),(_vm.rule.inputType === 'text')?_c('q-input',_vm._b({attrs:{"type":"text","placeholder":_vm.labels.textInputPlaceholder},model:{value:(_vm.query.value),callback:function ($$v) {_vm.$set(_vm.query, "value", $$v)},expression:"query.value"}},'q-input',_vm.pInput,false)):_vm._e(),(_vm.rule.inputType === 'number')?_c('q-input',_vm._b({attrs:{"type":"number"},model:{value:(_vm.query.value),callback:function ($$v) {_vm.$set(_vm.query, "value", $$v)},expression:"query.value"}},'q-input',_vm.pInput,false)):_vm._e(),(_vm.rule.inputType === 'date')?_c('q-input',_vm._b({attrs:{"type":"date"},model:{value:(_vm.query.value),callback:function ($$v) {_vm.$set(_vm.query, "value", $$v)},expression:"query.value"}},'q-input',_vm.pInput,false)):_vm._e(),(_vm.isCustomComponent)?_c('div',{staticClass:"vqb-custom-component-wrap"},[_c(_vm.rule.component,{tag:"component",attrs:{"value":_vm.query.value},on:{"input":_vm.updateQuery}})],1):_vm._e(),(_vm.rule.inputType === 'checkbox')?[_c('q-option-group',{attrs:{"options":_vm.rule.choices,"type":"checkbox"},model:{value:(_vm.query.value),callback:function ($$v) {_vm.$set(_vm.query, "value", $$v)},expression:"query.value"}})]:_vm._e(),(_vm.rule.inputType === 'radio')?[_c('q-option-group',{attrs:{"options":_vm.rule.choices},model:{value:(_vm.query.value),callback:function ($$v) {_vm.$set(_vm.query, "value", $$v)},expression:"query.value"}})]:_vm._e(),(_vm.rule.inputType === 'select' && !_vm.hasOptionGroups)?_c('q-select',_vm._b({attrs:{"clearable":false,"multiple":_vm.rule.type === 'multi-select',"options":_vm.selectOptions},model:{value:(_vm.query.value),callback:function ($$v) {_vm.$set(_vm.query, "value", $$v)},expression:"query.value"}},'q-select',_vm.pSelect,false)):_vm._e(),(_vm.rule.inputType === 'select' && _vm.hasOptionGroups)?_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.query.value),expression:"query.value"}],attrs:{"multiple":_vm.rule.type === 'multi-select'},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.query, "value", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},_vm._l((_vm.selectOptions),function(option,option_key){return _c('optgroup',{key:option_key,attrs:{"label":option_key}},_vm._l((option),function(sub_option){return _c('option',{key:sub_option.value,domProps:{"value":sub_option.value}},[_vm._v(_vm._s(sub_option.label))])}),0)}),0):_vm._e(),_c('q-btn',{attrs:{"round":"","unelevated":"","size":"sm","type":"button","icon":"mdi-close"},on:{"click":_vm.remove}})],2)])])}
+var QuasarRulevue_type_template_id_7dd4a8ba_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/layouts/Quasar/QuasarRule.vue?vue&type=template&id=79098894&
+// CONCATENATED MODULE: ./src/layouts/Quasar/QuasarRule.vue?vue&type=template&id=7dd4a8ba&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0f04f499-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/QueryBuilderRule.vue?vue&type=template&id=2b774123&
 var QueryBuilderRulevue_type_template_id_2b774123_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div')}
@@ -4871,35 +4871,6 @@ var QueryBuilderRule_component = normalizeComponent(
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ var QuasarRulevue_type_script_lang_js_ = ({
   extends: QueryBuilderRule,
@@ -4942,8 +4913,8 @@ var QueryBuilderRule_component = normalizeComponent(
 
 var QuasarRule_component = normalizeComponent(
   Quasar_QuasarRulevue_type_script_lang_js_,
-  QuasarRulevue_type_template_id_79098894_render,
-  QuasarRulevue_type_template_id_79098894_staticRenderFns,
+  QuasarRulevue_type_template_id_7dd4a8ba_render,
+  QuasarRulevue_type_template_id_7dd4a8ba_staticRenderFns,
   false,
   null,
   null,
