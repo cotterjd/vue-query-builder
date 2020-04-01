@@ -10,7 +10,7 @@
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs"
   },
-  "main": "./dist/VueQueryBuilder.common.js",
+  "main": "./src/VueQueryBuilder.vue",
   "files": [
     "dist/",
     "src/",
