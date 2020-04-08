@@ -28,7 +28,7 @@
           v-model="query.value"
           v-bind="pInput"
           type="text"
-          :placeholder="labels.textInputPlaceholder"
+          :placeholder="rule.placeholder"
         />
 
         <!-- Basic number input -->
