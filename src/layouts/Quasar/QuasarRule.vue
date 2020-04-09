@@ -59,7 +59,7 @@
 
         <!-- Radio input -->
         <template v-if="rule.inputType === 'radio'">
-          <q-option-group v-model="query.value" :options="rule.choices" />
+          <q-option-group v-model="query.value" :options="rule.choices" :inline="true" />
         </template>
 
         <!-- Select without groups -->
