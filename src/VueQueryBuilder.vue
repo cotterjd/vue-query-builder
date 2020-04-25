@@ -4,6 +4,7 @@
       <query-builder-group
         v-bind="vqbProps"
         :query.sync="query"
+        @rule-added="rule => $emit(`rule-added`, rule)"
       />
     </slot>
   </div>
