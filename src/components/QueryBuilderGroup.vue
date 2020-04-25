@@ -63,6 +63,7 @@ export default {
         child.query.value = [];
       }
       updated_query.children.push(child);
+      this.$emit('rule-added', this.selectedRule);
       this.$emit('update:query', updated_query);
     },
 
