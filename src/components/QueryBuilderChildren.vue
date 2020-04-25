@@ -13,6 +13,7 @@
       :max-depth="maxDepth"
       :depth="depth + 1"
       :labels="labels"
+      :send-field="$parent.sendField"
       @child-deletion-requested="$parent.removeChild"
     />
   </div>
