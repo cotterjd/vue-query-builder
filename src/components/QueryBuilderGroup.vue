@@ -24,13 +24,20 @@ export default {
     index: Number,
     maxDepth: Number,
     depth: Number,
-    labels: Object
+    labels: Object,
+    sendField: Function,
   },
 
   data() {
     return {
       selectedRule: this.rules[0]
     }
+  },
+  
+  mounted () {
+    this.$on(`rule-added`, rule => {
+      this.sendField(rule)
+    })
   },
 
   methods: {
