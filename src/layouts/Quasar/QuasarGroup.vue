@@ -4,13 +4,10 @@
       <q-select
         v-model="selectedRule"
         v-bind="pSelect"
+        title="Choose field for search criteria."
         :options="rules"
         :clearable="false"
-      >
-        <q-tooltip>
-          Choose field for search criteria.
-        </q-tooltip>
-      </q-select>
+      />
 
       <q-btn-group unelevated>
         <q-btn
@@ -19,11 +16,9 @@
           :dense="false"
           class="text-primary"
           icon="mdi-plus"
+          title="Add selected field to search criteria."
           @click="addRule"
-        >
-          <q-tooltip>
-            Add selected field to search criteria.
-          </q-tooltip>
+        />
         </q-btn>
 
         <q-btn
@@ -33,12 +28,9 @@
           :dense="false"
           class="text-primary"
           icon="mdi-expand-all-outline"
+          title="Add nested criteria group."
           @click="addGroup"
-        >
-          <q-tooltip>
-            Add nested criteria group.
-          </q-tooltip>
-        </q-btn>
+        />
 
         <q-select
           v-model="query.logicalOperator"
@@ -47,11 +39,8 @@
           :filled="false"
           class="q-mx-sm text-body2"
           v-bind="pSelect"
-        >
-          <q-tooltip>
-            Change logical operator.
-          </q-tooltip>
-        </q-select>
+          title="Change logical operator."
+        />
 
         <q-btn
           v-if="depth > 1"
@@ -60,12 +49,9 @@
           :dense="false"
           class="text-primary"
           icon="mdi-close"
+          title="remove nested criteria group"
           @click="remove"
         />
-          <q-tooltip>
-            Remove nested criteria group.
-          </q-tooltip>
-        </q-btn>
       </q-btn-group>
     </q-toolbar>
 
@@ -112,4 +98,3 @@ export default {
   })
 }
 </script>
-
