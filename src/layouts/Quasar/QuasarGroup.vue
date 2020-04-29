@@ -6,7 +6,11 @@
         v-bind="pSelect"
         :options="rules"
         :clearable="false"
-      />
+      >
+        <q-tooltip>
+          Choose field for search criteria.
+        </q-tooltip>
+      </q-select>
 
       <q-btn-group unelevated>
         <q-btn
@@ -16,7 +20,11 @@
           class="text-primary"
           icon="mdi-plus"
           @click="addRule"
-        />
+        >
+          <q-tooltip>
+            Add selected field to search criteria.
+          </q-tooltip>
+        </q-btn>
 
         <q-btn
           v-if="depth < maxDepth"
@@ -26,7 +34,11 @@
           class="text-primary"
           icon="mdi-expand-all-outline"
           @click="addGroup"
-        />
+        >
+          <q-tooltip>
+            Add nested criteria group.
+          </q-tooltip>
+        </q-btn>
 
         <q-select
           v-model="query.logicalOperator"
@@ -35,7 +47,11 @@
           :filled="false"
           class="q-mx-sm text-body2"
           v-bind="pSelect"
-        />
+        >
+          <q-tooltip>
+            Change logical operator.
+          </q-tooltip>
+        </q-select>
 
         <q-btn
           v-if="depth > 1"
@@ -46,6 +62,10 @@
           icon="mdi-close"
           @click="remove"
         />
+          <q-tooltip>
+            Remove nested criteria group.
+          </q-tooltip>
+        </q-btn>
       </q-btn-group>
     </q-toolbar>
 
@@ -92,3 +112,4 @@ export default {
   })
 }
 </script>
+
