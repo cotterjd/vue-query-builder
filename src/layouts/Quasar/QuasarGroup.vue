@@ -1,12 +1,21 @@
 <template>
-  <div class="q-card q-card--flat no-shadow" :class="depth > 1 ? `q-ma-md q-card--bordered` : ``">
-    <q-toolbar style="min-height: 40px" class="bg-blue-grey-1">
+  <div
+    class="q-card q-card--flat no-shadow"
+    :class="depth > 1 ? `q-ma-md q-card--bordered` : ``"
+  >
+    <q-toolbar
+      style="min-height: 40px"
+      class="bg-blue-grey-1"
+    >
       <q-select
         v-model="selectedRule"
         v-bind="pSelect"
         title="Choose field for search criteria."
-        :options="rules"
+        input-debounce="0"
+        use-input
+        :options="filteredRules"
         :clearable="false"
+        @filter="filterFn"
       />
 
       <q-btn-group unelevated>
@@ -19,7 +28,6 @@
           title="Add selected field to search criteria."
           @click="addRule"
         />
-        </q-btn>
 
         <q-btn
           v-if="depth < maxDepth"
