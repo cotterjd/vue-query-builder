@@ -30,10 +30,11 @@ export default {
 
   data() {
     return {
-      selectedRule: this.rules[0]
+      selectedRule: null, // this.rules[0],
+      filteredRules: this.rules,
     }
   },
-  
+
   mounted () {
     this.$on(`rule-added`, rule => {
       this.sendField(rule)
@@ -71,6 +72,7 @@ export default {
       }
       updated_query.children.push(child);
       this.$emit('rule-added', this.selectedRule);
+      this.selectedRule = null; // clear selectedRule so input is filterable again
       this.$emit('update:query', updated_query);
     },
 
@@ -96,6 +98,21 @@ export default {
       let updated_query = deepClone(this.query);
       updated_query.children.splice(index, 1);
       this.$emit('update:query', updated_query);
+    },
+
+    // copied from quasar docs
+    filterFn (val, update) {
+      if (val === '') {
+        update(() => {
+          this.filteredRules = this.rules
+        })
+        return
+      }
+
+      update(() => {
+        const needle = val.toLowerCase()
+        this.filteredRules = this.rules.filter(v => v.id.toLowerCase().indexOf(needle) > -1)
+      })
     }
   }
 }
